@@ -1,0 +1,173 @@
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+
+    /* 
+        font-family: 'Spartan', sans-serif;
+        font-family: 'Work Sans', sans-serif;
+    */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 62.5%; /* font-size = 10px */
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'left right';
+
+    overflow: hidden;
+}
+
+.left {
+    grid-area: left;
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-bg-color);
+}
+
+.left .logo{
+    height: 9.4rem;
+    width: 38.9rem;
+    position: fixed;
+    top: 5rem;
+    left: 3rem;
+}
+
+.contents {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.contents .text {
+    margin: 0 3.6rem 5rem 3.6rem;
+}
+
+.contents .text h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.815rem;
+    color: var(--title-color);
+    
+    margin-bottom: .856rem;
+}
+
+.contents .text > p {
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.568rem;
+    color: var(--text-color);
+
+    margin-bottom: .9rem;
+}
+
+.contents .text > p + p {
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.9rem;
+    color: var(--text-color);
+}
+
+.contents .form {
+    margin: 0 3.6rem 5rem 3.6rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.contents .form label {
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.942rem;
+    color: var(--text-color);
+
+    margin-bottom: 1.7rem;
+}
+
+.contents .form .input-button {
+    height: 4.8rem;
+    width: 75rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.contents .form .input-button input {
+    position: fixed;
+    z-index: 1;
+    height: 4.8rem;
+    width: 75rem;
+
+    outline: none;
+    padding: 1rem;
+
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #6A6A6A;
+
+    border-left: .5rem solid var(--title-color);
+}
+
+.contents .form .input-button button {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    height: 4.8rem;
+    width: 4.8rem;
+    background-color: var(--bg-button-color);
+    cursor: pointer;
+}
+
+.contents > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    margin-left: 3.6rem;
+}
+
+.contents > div a {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.942rem;
+    color: var(--bg-button-color);
+    text-decoration: none;
+
+    margin-right: .5rem;
+}
+
+.arrow {
+    display: flex;
+}
+
+.right {
+    grid-area: right;
+    background-image: url('assets/read_news.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
